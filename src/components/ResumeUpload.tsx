@@ -28,7 +28,7 @@ const ResumeUpload = ({
     try {
       setUploading(true);
       setUploadMsg('');
-      const res = await fetch('http://localhost:5050/upload/resume', {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/upload/resume`, {
         method: 'POST',
         body: formData,
       });
